@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Anitha! 🎂💖 | A Special Surprise</title>
+    
+    <!-- Meta & Favicon -->
+    <meta name="description" content="A special, emotional birthday surprise website for Anitha.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Ambient Glowing Background & Particles -->
+    <div class="bg-ambient-layer">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+        <div id="ambientParticles"></div>
+    </div>
+
+    <!-- =============================================================
+         PAGE 1: WELCOME SURPRISE
+         ============================================================= -->
+    <section class="surprise-section" id="welcomeSection">
+        <div class="balloon-group">
+            <div class="balloon balloon-1"></div>
+            <div class="balloon balloon-2"></div>
+            <div class="balloon balloon-3"></div>
+            <div class="balloon balloon-4"></div>
+        </div>
+
+        <div class="section-container">
+            <div class="hero-box glass-card">
+                <div class="hero-top-pill">
+                    <span class="pill-sparkle">✨</span>
+                    <span>A Special Surprise Just For You</span>
+                    <span class="pill-sparkle">✨</span>
+                </div>
+
+                <div class="hero-gift-icon-wrap">
+                    <div class="hero-gift-glow"></div>
+                    <div class="hero-gift-emoji">🎁</div>
+                </div>
+
+                <div class="hero-title-group">
+                    <span class="hero-script-tag" id="heroScriptTag">Anitha,</span>
+                    <h1 class="hero-main-title" id="heroGreeting">This Is For You 💖</h1>
+                </div>
+
+                <p class="hero-subtitle" id="heroSubtitle">
+                    A little world of cherished memories, heartfelt words, and sweet surprises created just for you...
+                </p>
+
+                <div class="hero-btn-wrap">
+                    <button class="btn btn-primary btn-glow" id="openSurpriseBtn">
+                        <span id="openSurpriseBtnText">Open Your Surprise 🎁</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================================
+         PAGE 2: BIRTHDAY CELEBRATION (DEEP & EMOTIONAL)
+         ============================================================= -->
+    <section class="surprise-section" id="celebrationSection">
+        <div class="section-container">
+            <div class="celebration-card glass-card">
+                <div class="celebration-crown">👑✨</div>
+                <span class="section-tag" id="celebrationTag">👑 To Someone Irreplaceable 👑</span>
+                <h2 class="celebration-title" id="celebrationHeading">Happy Birthday, Anitha! 🎂✨</h2>
+                
+                <div class="celebration-highlight-quote" id="celebrationQuote">
+                    “Some people make the world brighter just by existing in it. You are one of them.”
+                </div>
+
+                <div class="celebration-paragraphs">
+                    <p id="celebrationP1">
+                        Wishing you a day filled with pure happiness, endless laughter, and beautiful moments that touch your soul. You are a truly wonderful person with a heart full of warmth, and I hope this new chapter of your life brings you countless reasons to smile every single day.
+                    </p>
+                    <p id="celebrationP2">
+                        May you always find peace in the quiet moments, strength during tough times, and boundless joy in every step you take. Keep smiling, keep shining, and never change the gentle, incredible person you are. 💖
+                    </p>
+                </div>
+
+                <div class="celebration-badge-row">
+                    <span class="section-tag">✨ Keep Shining Forever ✨</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================================
+         PAGE 3: POLAROID MEMORY GALLERY 📸
+         ============================================================= -->
+    <section class="surprise-section" id="gallerySection">
+        <div class="section-container">
+            <span class="section-tag">📸 Precious Memories</span>
+            <h2 class="section-title">Moments & Memories 🌸</h2>
+            <p class="section-subtitle">Every photograph holds a story, every smile holds a memory, and every moment with you is unforgettable.</p>
+            
+            <!-- Polaroid Gallery Grid (Populated dynamically) -->
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true">
+        <button class="lightbox-close-btn" id="lightboxClose" aria-label="Close photo view">✕</button>
+        <button class="lightbox-nav-btn prev" id="lightboxPrev" aria-label="Previous photo">❮</button>
+        <button class="lightbox-nav-btn next" id="lightboxNext" aria-label="Next photo">❯</button>
+        
+        <div class="lightbox-content">
+            <div class="lightbox-img-container">
+                <img src="" alt="Memory Photo" id="lightboxImg" />
+            </div>
+            <div class="lightbox-footer">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+                <span class="lightbox-counter" id="lightboxCounter">1 / 8</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================================================
+         PAGE 4: WHY YOU ARE SPECIAL 🌸
+         ============================================================= -->
+    <section class="surprise-section" id="specialSection">
+        <div class="section-container">
+            <span class="section-tag">💖 From The Heart</span>
+            <h2 class="section-title">Why You Are Special 🌸</h2>
+            <p class="section-subtitle">Just a few of the countless things that make you so truly incredible and loved.</p>
+            
+            <div class="special-grid" id="specialGrid"></div>
+        </div>
+    </section>
+
+    <!-- =============================================================
+         PAGE 5: INTERACTIVE BIRTHDAY CAKE 🎂
+         ============================================================= -->
+    <section class="surprise-section" id="cakeSection">
+        <div class="section-container">
+            <span class="section-tag" id="cakeTag">🎂 Time For A Wish</span>
+            <h2 class="section-title" id="cakeHeading">Make Your Birthday Wish ✨</h2>
+            <p class="section-subtitle" id="cakeSubtext">Close your eyes, think of your deepest wish, and blow out the candles!</p>
+
+            <div class="cake-stage" id="cakeContainer">
+                <div class="cake-wrapper">
+                    <div class="candles-row">
+                        <div class="cake-candle" title="Click to blow candle">
+                            <div class="wick"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="cake-candle" title="Click to blow candle">
+                            <div class="wick"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="cake-candle" title="Click to blow candle">
+                            <div class="wick"></div>
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+
+                    <div class="cake-tier tier-top">
+                        <div class="frosting-drips"></div>
+                    </div>
+
+                    <div class="cake-tier tier-middle">
+                        <div class="frosting-drips"></div>
+                    </div>
+
+                    <div class="cake-tier tier-bottom">
+                        <div class="frosting-drips"></div>
+                    </div>
+
+                    <div class="cake-plate"></div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-glow" id="makeWishBtn">
+                <span id="makeWishBtnText">Blow Candles & Make a Wish 🎂🕯️</span>
+            </button>
+
+            <div class="wish-result-card glass-card" id="wishResultCard">
+                <div class="wish-heading" id="cakeWishTitle">May All Your Wishes Come True! 💖</div>
+                <p class="wish-sub" id="cakeWishMessage">May the universe shower you with endless joy, profound peace, good health, and success in everything you set your heart upon!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================================
+         PAGE 6: SECRET MESSAGE 💌 (DEEP EMOTIONAL LETTER)
+         ============================================================= -->
+    <section class="surprise-section" id="letterSection">
+        <div class="section-container">
+            <span class="section-tag" id="letterTag">💌 From The Depth of My Heart</span>
+            <h2 class="section-title" id="letterTeaser">You have one secret letter waiting... 💌</h2>
+            <p class="section-subtitle" id="letterSubtext">Click on the wax seal stamp or button below to open your letter ✨</p>
+
+            <!-- 3D Interactive Envelope -->
+            <div class="envelope-container">
+                <div class="envelope-box" id="envelopeWrapper" title="Click to open or fold letter">
+                    <div class="env-back"></div>
+                    
+                    <div class="env-letter-peek">
+                        <span class="peek-title">A Special Note For You 🌸</span>
+                    </div>
+
+                    <div class="env-front-left"></div>
+                    <div class="env-front-right"></div>
+                    <div class="env-flap"></div>
+                    <div class="env-seal" id="waxSeal">💖</div>
+                </div>
+
+                <div class="envelope-actions">
+                    <button class="btn btn-primary btn-glow" id="openLetterBtn">
+                        <span id="openLetterBtnText">Open Secret Letter 💌</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Full Unfolded Parchment Letter Card -->
+            <div class="letter-unfolded-card glass-card" id="letterDisplayCard">
+                <div class="letter-inner-parchment">
+                    <div class="letter-ribbon-badge">🌸 Special Letter For Anitha 🌸</div>
+                    <h3 class="letter-header" id="letterSalutation">Dearest Anitha 🌸,</h3>
+                    
+                    <div class="letter-body" id="letterBody">
+                        <p>I may be foolish in your life, but I have never been fake to you. Maybe right now you don't trust me completely, and I know that... but no matter what happens, you will always be truly special to me in my life. Even if one day you forget me, I know for sure that I could never forget you. Even today, I still wonder why that same warmth and heartfelt connection isn't coming from your side, Anitha... but my heart will always care for you the same.</p>
+                        <p>I know I may not have been the best friend to you, but to me, you are the one and only true friend I have ever had. Even people I called best friends were fake to me sometimes, but you were always genuine and never fake. Whenever I get the chance to help you, it feels so special to me — because helping you makes me feel like you are truly my own person in my life. And if tomorrow you achieve greater success than me, remember that I will be the very first person in this world to celebrate and be genuinely happy for you.</p>
+                        <p>I know I overreact sometimes, but even in those moments, thank you for understanding me. In my heart, I always feel that this friendship between us should never, ever break for the rest of our lives.</p>
+                        <p>Sometimes I keep calling you and asking to go out somewhere, for a trip, or for food, and when you can't come, I keep calling... <em>“Naku nuvvu thappa inka evaru leru friends ga...”</em> (I have no other real friends in my life except you, Anitha). That is the only reason I am always calling you. If that ever bothered you or made you feel uncomfortable, I am truly sorry from the bottom of my heart.</p>
+                        <p>It has always been a little dream of mine that one day, you and I could spend some peaceful time together, going on an outing or a trip. I keep holding onto the hope that someday my dream will come true, and I will always be waiting for that day... even though deep down, I sometimes wonder if it will only ever remain a dream.</p>
+                        <p>Finally, a very Happy Birthday to my lovely, sweetest friend! May this year bring you boundless happiness, peace, and endless smiles.</p>
+                    </div>
+
+                    <div class="letter-footer">
+                        <p id="letterClosing">With all my heartfelt care & true emotions,</p>
+                        <strong id="letterSignature">From your foolish friend Kupendra ❤️</strong>
+                    </div>
+
+                    <div class="letter-fold-action">
+                        <button class="btn btn-secondary" id="closeLetterBtn">Fold Letter ✉️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================================
+         PAGE 7: FINAL CELEBRATION & FIREWORKS 🎉
+         ============================================================= -->
+    <section class="surprise-section" id="finaleSection">
+        <canvas id="fireworksCanvas"></canvas>
+
+        <div class="section-container">
+            <div class="finale-card glass-card">
+                <div class="finale-sparkle-icon">🎆✨🎉</div>
+                <span class="section-tag" id="finalTag">🎉 Happy Birthday Anitha 🎉</span>
+                <h2 class="finale-heading" id="finalHeading">Happy Birthday Once Again! 🎂💖</h2>
+                <p class="finale-quote" id="finalQuote">“Here’s to more smiles, more laughter, more crazy memories, and more beautiful moments ahead!”</p>
+                <p class="finale-tagline" id="finalTagline">Always wishing you the very best — From your foolish friend Kupendra 🌸</p>
+
+                <div class="finale-actions">
+                    <button class="btn btn-primary" id="replaySurpriseBtn">Replay Surprise 🔄</button>
+                    <button class="btn btn-secondary" id="sendHugBtn">Send Virtual Hug 🤗</button>
+                    <button class="btn btn-secondary" id="loveRainBtn">Shower of Hearts 💕</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Files (Audio removed as requested) -->
+    <script src="js/config.js"></script>
+    <script src="js/confetti.js"></script>
+    <script src="js/fireworks.js"></script>
+    <script src="js/cake.js"></script>
+    <script src="js/envelope.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

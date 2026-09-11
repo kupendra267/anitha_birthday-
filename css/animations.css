@@ -1,0 +1,102 @@
+/* ====================================================================
+   ✨ ANIMATIONS & KEYFRAME TRANSITIONS ✨
+   ==================================================================== */
+
+@keyframes orbDrift {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, 40px) scale(1.15); }
+    100% { transform: translate(-40px, 50px) scale(0.9); }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+    15% { opacity: 0.65; }
+    85% { opacity: 0.65; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg) scale(1.15);
+        opacity: 0;
+    }
+}
+
+@keyframes floatBalloon {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-26px) rotate(4deg); }
+    50% { transform: translateY(-42px) rotate(-3deg); }
+    75% { transform: translateY(-18px) rotate(2deg); }
+}
+
+@keyframes gentleBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes crownFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+    50% { transform: translateY(-8px) rotate(-6deg) scale(1.08); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 10px 25px rgba(244, 63, 94, 0.45), 0 0 0 0 rgba(244, 63, 94, 0.4);
+    }
+    50% {
+        box-shadow: 0 14px 35px rgba(244, 63, 94, 0.65), 0 0 0 14px rgba(244, 63, 94, 0);
+    }
+}
+
+@keyframes flameFlicker {
+    0% {
+        transform: translateX(-50%) scale(1) rotate(-1deg);
+        filter: drop-shadow(0 0 8px #ffeb3b);
+    }
+    25% {
+        transform: translateX(-50%) scale(1.06, 0.94) rotate(2deg);
+        filter: drop-shadow(0 0 12px #ff9800);
+    }
+    50% {
+        transform: translateX(-50%) scale(0.94, 1.08) rotate(-2deg);
+        filter: drop-shadow(0 0 16px #ff5722);
+    }
+    75% {
+        transform: translateX(-50%) scale(1.03, 0.97) rotate(1deg);
+        filter: drop-shadow(0 0 10px #ffeb3b);
+    }
+    100% {
+        transform: translateX(-50%) scale(1) rotate(0deg);
+        filter: drop-shadow(0 0 12px #ff9800);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.7) translateY(30px);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.04) translateY(-6px);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fallLove {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(105vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes eqBounce {
+    0%, 100% { height: 4px; }
+    50% { height: 16px; }
+}
